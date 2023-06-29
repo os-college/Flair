@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body { background-color: black;}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+    padding: 10px;
+    background-color: #00000048;
+    backdrop-filter: blur(30px);
+    border-bottom: 1px solid white;
+    position: fixed;
+}
+
+.seperator {
+    height: 200px;
+    background-color: black;
+}
+
+.brand-text {
+    padding: 10px;
+    color: white;
+    font-size: 40px;
+    font-family: 'Ysabeau SC', sans-serif;
+}
+
+.navbar-links {
+    display: flex;
+}
+
+.navbar-links-text {
+    padding: 10px;
+    color: white;
+    font-size: 14px;
+    font-family: 'Maven Pro', sans-serif;
+    position: relative; /* Added position: relative */
+}
+
+.navbar-links-text::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    background-color: white;
+    height: 2px;
+    transition: width 0.3s ease;
+    z-index: -1;
+}
+
+.navbar-links-text:hover::before {
+    width: 100%;
+    transition-timing-function: cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.navbar-links a {
+    transition: color 0.3s ease-out, background-color 0.3s ease-out;
+}
+
+.navbar-links a:focus {
+    background-color: white;
+}
+
+.navbar-links a:focus .navbar-links-text {
+    color: black;
+}
+
+.container {  
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+    gap: 50px 50px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      ". . ."
+      ". . ."
+      ". . .";
+}
+
+.container-post {
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #222;
+    border: 1px solid #555;
+    box-shadow: 0px 0px 50px 0px #555;
+}
+
+.container-post img {
+    width: 300px;
+    height: 300px;
+}
+
+.container-post-details {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background-color: black;
+}
+
+.container-post-user {
+    display: flex;
+    align-items: center;
+}
+
+.container-post-user i {
+    padding-left: 10px;
+    font-size: 24px;
+    color: white;
+}
+
+.container-post-user i:hover {
+    transform: scale(95%);
+}
+
+.container-post-user h1 {
+    padding: 10px;
+    color: white;
+    font-size: 14px;
+    font-family: 'Maven Pro', sans-serif;
+}
+
+.container-post-user h1:hover {
+    text-decoration: solid underline white;
+}
+
+.container-post-tags {
+    display: flex;
+    align-items: center;
+}
+
+.container-post-tags p {
+    padding: 10px;
+    color: lightblue;
+    font-size: 14px;
+    font-family: 'Maven Pro', sans-serif;
+    font-weight: 500;
+}
+
+.container-post-tags a:hover {
+    text-decoration: solid underline lightblue;
+}
