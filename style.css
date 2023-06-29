@@ -18,15 +18,17 @@ a {
     height: auto;
     width: 100%;
     padding: 10px;
-    background-color: #00000013;
+    background-color: #00000071;
     backdrop-filter: blur(10px);
     border-bottom: 1px solid white;
     position: fixed;
     z-index: 1;
 }
 
-.seperator {
-    height: 200px;
+.content {
+    position: relative;
+    height: 300px;
+    width: 100%;
     background-color: black;
 }
 
@@ -39,6 +41,10 @@ a {
 
 .navbar-links {
     display: flex;
+}
+
+.nav-link-selected {
+    font-weight: 900;
 }
 
 .navbar-links-text {
